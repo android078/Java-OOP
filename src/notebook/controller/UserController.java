@@ -51,4 +51,22 @@ public class UserController {
         return true;
     }
 
+//    public void upper(Long userid) {
+//        List<User> users = repository.findAll();
+//        for (User user : users) {
+//            if (Objects.equals(user.getId(), userid)) {
+//                //repository.user.setName(userid);
+//                repository.upper(userid);
+//            }
+//        }
+//    }
+
+    public void upper(Long userid) {
+        List<User> users = repository.findAll();
+        for (User user : users) {
+            if (Objects.equals(user.getId(), userid)) {
+                repository.upper(userid);
+            }
+        }
+    }
 }

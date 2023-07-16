@@ -79,6 +79,15 @@ public class UserRepository implements GBRepository<User, Long> {
         }
         operation.saveAll(lines);
     }
+    public void upper(Long id) {
+        List<User> users = findAll();
+        for (User user : users) {
+            if (Objects.equals(user.getId(), id)) {
+                user.setFirstName(user.getFirstName().toUpperCase());
+                user.setLastName(user.getLastName().toUpperCase());
+            }
+        }
+    }
 
 
     @Override

@@ -66,6 +66,14 @@ public class UserView {
                         } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
+                case NONE:
+                    try {
+                        Long userid = Long.parseLong(prompt("¬ведите идентификатор пользовател€: "));
+                        userController.upper(userid);
+                        break;
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
 
             }
 
