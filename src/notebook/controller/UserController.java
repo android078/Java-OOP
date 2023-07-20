@@ -13,10 +13,12 @@ public class UserController {
     private final GBRepository<User, Long> repository;
 
     public UserController(GBRepository<User, Long> repository) {
+
         this.repository = repository;
     }
 
     public void saveUser(User user) {
+
         repository.create(user);
     }
 
